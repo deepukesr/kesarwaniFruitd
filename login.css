@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/fruits-background-3.jpg') no-repeat center center fixed;
+    background-size: cover;  /* Ensures the image covers the entire viewport */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+input{
+    outline: none;
+}
+
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group select{
+    margin-left:10px;
+    outline:none;
+}
+.input-group label{
+    font-size: 13px;
+}
+.input-group #dob{
+    width:120px;
+    margin-left:30px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.captcha-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.refresh-captcha {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#otp-box-login, #otp-box-signup {
+    display: none;
+}
+
+.switch-form-link {
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.switch-form-link:hover {
+    text-decoration: underline;
+}
+
+#otp-box-signup {
+    margin-top:10px;
+}
+
+/* Animation for left-to-right effect */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start from the left side of the screen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at the normal position */
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    animation: slideInLeft 1s ease-out; /* Apply left-to-right animation */
+}
+
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    animation: slideInLeft 1s ease-out;
+    animation-delay: 0.3s; /* Delay for form-box to appear */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease-out;
+    animation-delay: 0.6s; /* Delay for input groups */
+}
+
+/* Add delay to other elements if needed */
+button, .switch-form-link, .captcha-group {
+    animation: slideInLeft 1s ease-out;
+    animation-delay: 1s; /* Delay for buttons and links */
+}
